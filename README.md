@@ -3,7 +3,7 @@
 A parallelized function to calculate a similarity index for every pixel within an given radius buffer of each sampling point and returns the values of those cells. This is intended to supplement training data for digital soil class mapping based on the polypedon idea. 
 
 Thoughts on covariates:
-- It generally apperas that choosing fewer covariates is better than many covariates. Covariates should be calculated over local neighborhoods because the intention of this function is to find surrounding areas that are very similar to a location where there is a real observation.  
+- Initial testing suggests that all covariates which will be used for prediction should be included in this function. Choosing only two or three covariates, then using the resulting polypedon locations to exctract covariates values to be used in the modeling results in an accuracy decrease and a duplication of effort. 
 
 Observations of buffer size:
 - Smaller buffers generally result in lower similarity values.
